@@ -19,7 +19,9 @@ void printDuplicateChars(string target_str) {
 
     // loop for print duplicate chars and its count
     for (map<char, int>::iterator itr = char_cnt_mp.begin(); itr != char_cnt_mp.end(); ++itr) {
-        cout << itr->first << " => " << itr->second << endl;
+        if (itr->second > 1) {
+            cout << itr->first << " => " << itr->second << endl;
+        }
     }
 }
 
